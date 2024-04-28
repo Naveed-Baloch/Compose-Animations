@@ -124,9 +124,8 @@ object ItemPlacementComponents {
             )
 
             Button(
-                onClick = {
-                    list.value = list.value.shuffled()
-                }, modifier = Modifier
+                onClick = { list.value = list.value.shuffled() },
+                modifier = Modifier
                     .align(Alignment.BottomCenter)
                     .padding(30.dp)
             ) {
