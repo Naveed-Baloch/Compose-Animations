@@ -66,11 +66,14 @@ object ItemPlacementComponents {
     @Composable
     fun PlayerItem(player: Player, modifier: Modifier = Modifier) {
         Box(
-            modifier = modifier.requiredHeight(120.dp).requiredWidth(100.dp)
+            modifier = modifier
+                .requiredHeight(120.dp)
+                .requiredWidth(100.dp)
         ) {
             Image(
                 modifier = Modifier
-                    .requiredHeight(120.dp).requiredWidth(100.dp)
+                    .requiredHeight(120.dp)
+                    .requiredWidth(100.dp)
                     .clip(RoundedCornerShape(10.dp))
                     .border(width = 5.dp, shape = RoundedCornerShape(10.dp), color = Color.White),
                 painter = painterResource(id = player.imageId),
@@ -94,11 +97,12 @@ object ItemPlacementComponents {
 
     @OptIn(ExperimentalFoundationApi::class)
     @Composable
-    fun ItemsPlacementAnim() {
+    fun ItemsPlacementAnim(modifier: Modifier = Modifier) {
         val list = remember { mutableStateOf(playersList) }
         val itemPlacementAnim: FiniteAnimationSpec<IntOffset> = tween(700, easing = LinearOutSlowInEasing)
         Box(
-            modifier = Modifier.fillMaxSize()
+            modifier = modifier
+                .fillMaxSize()
                 .background(Color.Black)
         ) {
             LazyVerticalGrid(
@@ -108,8 +112,7 @@ object ItemPlacementComponents {
                 verticalArrangement = Arrangement.spacedBy(100.dp, Alignment.CenterVertically)
             ) {
                 items(
-                    items = list.value,
-                    key = { it.id }
+                    items = list.value, key = { it.id }
                 ) {
                     PlayerItem(player = it, modifier = Modifier.animateItemPlacement(itemPlacementAnim))
                 }
