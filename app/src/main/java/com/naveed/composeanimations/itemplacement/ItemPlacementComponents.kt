@@ -103,7 +103,6 @@ object ItemPlacementComponents {
         Box(
             modifier = modifier
                 .fillMaxSize()
-                .background(Color.Black)
         ) {
             LazyVerticalGrid(
                 modifier = Modifier.fillMaxSize(),
