@@ -13,5 +13,6 @@ We can easly animate the offset of the items of LazyRow/Column or Grid by just a
 4. Thats it now the whenever the Items placement will be changed then Animation will make the magic 🪄 <br>
 5. Checkout the [Code File](https://github.com/Naveed-Baloch/Compose-Animations/blob/cd46ff7599571a1cda144fd2bf0af6b9b277dc94/app/src/main/java/com/naveed/composeanimations/itemplacement/ItemPlacementComponents.kt) here. 
 #### Demo 
-https://github.com/Naveed-Baloch/Compose-Animations/assets/83871075/80cbba45-f914-4d73-9e5b-2531f5638dc0
+https://github.com/Naveed-Baloch/Compose-Animations/assets/83871075/232f6734-5e85-4a10-bc47-9e25972dfadd
+
 
