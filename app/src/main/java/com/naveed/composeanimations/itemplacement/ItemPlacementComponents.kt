@@ -22,6 +22,7 @@ import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
@@ -75,7 +76,7 @@ object ItemPlacementComponents {
                     .requiredHeight(120.dp)
                     .requiredWidth(100.dp)
                     .clip(RoundedCornerShape(10.dp))
-                    .border(width = 5.dp, shape = RoundedCornerShape(10.dp), color = Color.White),
+                    .border(width = 5.dp, shape = RoundedCornerShape(10.dp), color = MaterialTheme.colorScheme.primaryContainer),
                 painter = painterResource(id = player.imageId),
                 contentScale = ContentScale.Crop ,
                 contentDescription = "Player Image"
@@ -88,9 +89,10 @@ object ItemPlacementComponents {
                     .clip(RoundedCornerShape(bottomStart = 10.dp, bottomEnd = 10.dp))
                     .fillMaxWidth()
                     .requiredHeight(20.dp)
-                    .background(Color.White),
+                    .background(MaterialTheme.colorScheme.primaryContainer),
                 textAlign = TextAlign.Center,
-                fontWeight = FontWeight.SemiBold
+                fontWeight = FontWeight.SemiBold,
+                color = MaterialTheme.colorScheme.onPrimaryContainer
             )
         }
     }
@@ -103,9 +105,12 @@ object ItemPlacementComponents {
         Box(
             modifier = modifier
                 .fillMaxSize()
+                .background(MaterialTheme.colorScheme.background)
         ) {
             LazyVerticalGrid(
-                modifier = Modifier.fillMaxSize(),
+                modifier = Modifier
+                    .fillMaxSize()
+                    .background(MaterialTheme.colorScheme.background),
                 columns = GridCells.Fixed(3),
                 horizontalArrangement = Arrangement.Center,
                 verticalArrangement = Arrangement.spacedBy(100.dp, Alignment.CenterVertically)
@@ -122,7 +127,7 @@ object ItemPlacementComponents {
                 fontStyle = FontStyle.Italic,
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier.align(Alignment.Center),
-                color = Color.White
+                color = MaterialTheme.colorScheme.onBackground
             )
 
             Button(
