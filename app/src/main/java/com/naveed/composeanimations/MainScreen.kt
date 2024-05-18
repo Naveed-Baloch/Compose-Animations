@@ -32,6 +32,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.naveed.composeanimations.animatedPieChart.PieChartScreen
 import com.naveed.composeanimations.animateddrawer.AnimatedDrawer
 import com.naveed.composeanimations.components.Components.ComingSoon
 import com.naveed.composeanimations.components.Components.ToolBar
@@ -39,11 +40,11 @@ import com.naveed.composeanimations.extensions.clickableWithoutRipple
 import com.naveed.composeanimations.itemplacement.ItemPlacementComponents
 
 enum class Page {
-    ItemPlacement, AnimatedDialog, Logout
+    ItemPlacement, AnimatedPieChart, AnimatedDialog, Logout
 }
 
 val pageList by lazy {
-    listOf(Page.ItemPlacement, Page.AnimatedDialog, Page.Logout)
+    listOf(Page.ItemPlacement,Page.AnimatedPieChart, Page.AnimatedDialog, Page.Logout)
 }
 
 
@@ -51,6 +52,7 @@ fun Page.toText() = when (this) {
     Page.ItemPlacement -> "Item Placements"
     Page.AnimatedDialog -> " Animated Dialog"
     Page.Logout -> "Authentication"
+    Page.AnimatedPieChart -> "Pie Chart"
 }
 
 enum class DrawerState {
@@ -62,6 +64,7 @@ fun Page.UI() = when (this) {
     Page.ItemPlacement -> ItemPlacementComponents.ItemsPlacementAnim()
     Page.Logout -> ComingSoon()
     Page.AnimatedDialog -> ComingSoon()
+    Page.AnimatedPieChart -> PieChartScreen()
 }
 
 @Composable
