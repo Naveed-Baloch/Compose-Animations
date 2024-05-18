@@ -15,7 +15,7 @@ We can easly animate the offset of the items of LazyRow/Column or Grid by just a
 #### Demo 
 https://github.com/Naveed-Baloch/Compose-Animations/assets/83871075/232f6734-5e85-4a10-bc47-9e25972dfadd
 
-## 1. Animated Drawer
+## 2. Animated Drawer
 You can now utilize the AnimatedDrawer, which is totally customizable with the following features:<br>
 1️⃣ Control Rotation.<br>
 2️⃣ Change Background Colors, which are optional. <br>
@@ -24,3 +24,14 @@ You can now utilize the AnimatedDrawer, which is totally customizable with the f
 Checkout the [Code File](https://github.com/Naveed-Baloch/Compose-Animations/blob/main/app/src/main/java/com/naveed/composeanimations/animateddrawer/AnimatedDrawer.kt) here.
 #### Demo 
 https://github.com/Naveed-Baloch/Compose-Animations/assets/83871075/42b38e20-a003-4cdf-a63d-72d9f0ab2bed
+
+## 3. Animated Custom Pie Chart 
+With Animated Pie Chart you can show the Stats of any data which has following features<br>
+1️⃣ Control Spacing B/W Pie Chart Slices.<br>
+2️⃣ Change Radius of Pie chart & Slice Width. <br>
+3️⃣ Show Slices in Asecending, descending order or default as per the submitted data order<br>
+4️⃣ Control the Animation of Slices. <br>
+Checkout the [Code File](https://github.com/Naveed-Baloch/Compose-Animations/blob/main/app/src/main/java/com/naveed/composeanimations/animatedPieChart/AnimatedPieChart.kt) here. 
+#### Animated Pie Chart Demo 
+https://github.com/Naveed-Baloch/Compose-Animations/assets/83871075/145c5f7f-4eba-414b-aa4a-88c8cca60782
+
